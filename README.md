@@ -244,6 +244,8 @@ cp your_mask.jpg masks/
 
 ### Starting the Application
 
+![Application Running](images/Screenshot_2026-01-31_21-52-39.png)
+
 #### Option 1: Using the Command (if installed)
 
 If you ran `install.sh`, you can launch from anywhere:
