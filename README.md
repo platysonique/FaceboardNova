@@ -2,6 +2,8 @@
 
 Real-time face detection and augmented reality masking with virtual camera output. Track up to 5 faces with persistent identity, assign masks per face, and pipe to OBS or any streaming software.
 
+![Faceboard Nova Main Window](images/Screenshot_2026-01-31_21-45-39.png)
+
 ***
 
 ## 🎭 Overview
@@ -48,6 +50,8 @@ But beyond the fun, this tool addresses real needs: **privacy-preserving livestr
 ### User Interface
 
 - **Faceboard Window**: Visual interface for assigning masks to detected faces
+
+![Faceboard Window](images/Screenshot_2026-01-31_21-46-06.png)
 - **Real-time Preview**: Live preview of masked video feed
 - **Camera Selection**: Choose from available cameras
 - **Virtual Camera Device Selection**: Manually select or auto-detect virtual camera devices (auto-excludes `/dev/video9` to avoid OBS conflicts)
@@ -124,6 +128,8 @@ After installation, simply run:
 ```bash
 fbnova
 ```
+
+![Installation Script](images/Screenshot_2026-01-31_21-52-09.png)
 
 **Note**: The script will prompt you for:
 - Installing v4l2loopback (if not found) - requires sudo

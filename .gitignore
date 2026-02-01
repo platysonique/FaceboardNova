@@ -34,3 +34,6 @@ Thumbs.db
 # User masks (not included in repository)
 masks/
 !masks/.gitkeep
+
+# Keep images directory
+!images/
