@@ -213,23 +213,20 @@ Then restart your terminal or run `source ~/.bashrc`.
 
 **Important**: Faceboard Nova does **NOT** come with masks. You must provide your own mask images.
 
+The `masks/` directory is automatically created during installation. Simply add your mask images to it:
+
+```bash
+# Copy your mask files to the masks directory
+cp your_mask.png masks/
+cp your_animated_mask.gif masks/
+cp your_mask.jpg masks/
+```
+
 **Supported File Types**:
 
 - **PNG** (recommended) – Supports transparency via alpha channel
 - **JPG/JPEG** – Standard image format
 - **GIF** – Supports both static and animated masks
-
-Place your mask images in the `masks/` directory:
-
-```bash
-# Create masks directory if it doesn't exist
-mkdir -p masks
-
-# Copy your mask files
-cp your_mask.png masks/
-cp your_animated_mask.gif masks/
-cp your_mask.jpg masks/
-```
 
 **Mask Requirements**:
 
