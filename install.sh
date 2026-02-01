@@ -289,9 +289,9 @@ echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━�
 # Create masks directory if it doesn't exist
 if [ ! -d "$INSTALL_DIR/masks" ]; then
     mkdir -p "$INSTALL_DIR/masks"
+    # Create .gitkeep to preserve directory structure in git
+    touch "$INSTALL_DIR/masks/.gitkeep"
     echo -e "${GREEN}✓ Created masks directory${NC}"
-    echo -e "${YELLOW}⚠ Remember: Faceboard Nova does NOT come with masks${NC}"
-    echo "  Add your own mask images (PNG, JPG, or GIF) to: $INSTALL_DIR/masks/"
 else
     echo -e "${GREEN}✓ Masks directory already exists${NC}"
 fi
@@ -304,13 +304,15 @@ echo ""
 echo "You can now run Faceboard Nova with:"
 echo -e "${GREEN}  fbnova${NC}"
 echo ""
-echo "If the command is not found:"
-echo "  1. Make sure $BIN_DIR is in your PATH"
-echo "  2. Restart your terminal or run: source ~/.bashrc"
+if [[ ":$PATH:" != *":$BIN_DIR:"* ]]; then
+    echo -e "${YELLOW}Note:${NC} If 'fbnova' command is not found, restart your terminal"
+    echo "      or run: ${GREEN}source ~/.bashrc${NC}"
+fi
 echo ""
-echo "Next steps:"
-echo "  1. Add mask images to: $INSTALL_DIR/masks/"
-echo "  2. Run: fbnova"
+echo -e "${BLUE}Ready to use! 🎭${NC}"
+echo ""
+echo "Quick start:"
+echo "  1. Run: ${GREEN}fbnova${NC}"
+echo "  2. Add mask images (PNG/JPG/GIF) to: ${GREEN}$INSTALL_DIR/masks/${NC}"
 echo "  3. Click 'Start' and assign masks to faces"
 echo ""
-echo -e "${BLUE}Enjoy Faceboard Nova! 🎭${NC}"
